@@ -1,0 +1,24 @@
+{
+  "name": "chicken-bot",
+  "version": "1.0.0",
+  "description": "My First Discord Bot",
+  "main": "main.ts",
+  "author": "Yvanoski Sanon",
+  "dependencies": {
+    "discord.js": "^13.8.0",
+    "next": "12.1.0",
+    "next-session": "^4.0.4",
+    "pg": "^8.7.3",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^10.8.1",
+    "typeorm": "0.2.45"
+  },
+  "scripts": {
+    "start": "ts-node src/Bot.ts"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "typescript": "^4.7.3"
+  }
+}
