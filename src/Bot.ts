@@ -1,16 +1,25 @@
-import { Client, ClientOptions } from "discord.js";
+import * as dotenv from "dotenv";
+import { Client, Intents } from "discord.js";
 import interactionCreate from "./listeners/interactionCreate";
 import ready from "./listeners/ready";
 
-const token = "OTg3MDcwMTM4NzE1MDc4NjY2.GnhEy0.5agxSrk-KyHR1dHgJk5dX_rnT63Gt1IfKlM4hE" //generate new asap
+dotenv.config({ path: 'C:/Users/PC/Desktop/Projects/Web/ChickenBot/.env' }); // ASK DAMON ABOUT __dirname
 
-console.log("Bot is starting...");
+(async () => {
+    console.log("Bot is starting...");
+    
+    const bot = new Client({
+        intents: [
+            Intents.FLAGS.GUILDS,
+            Intents.FLAGS.GUILD_MESSAGES,
+            Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
+            Intents.FLAGS.GUILD_MEMBERS
+        ]
+    });
 
-const client = new Client({
-    intents: []
-});
+    ready(bot);
+    interactionCreate(bot);
 
-ready(client);
-interactionCreate(client);
+    await bot.login(process.env.BOT_TOKEN);
 
-client.login(token);
+})();

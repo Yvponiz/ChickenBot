@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Debug bot",
+        "args": ["${workspaceRoot}/src/Bot.ts"],
+        "cwd": "${workspaceRoot}",
+        "runtimeArgs": ["-r", "ts-node/register"],
+        "internalConsoleOptions": "neverOpen"
+      }
+    ]
+  }
