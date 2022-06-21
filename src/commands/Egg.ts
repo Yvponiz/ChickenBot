@@ -1,4 +1,4 @@
-import { BaseCommandInteraction, Client } from "discord.js";
+import { BaseCommandInteraction, BaseGuildTextChannel, Client, GuildTextBasedChannel } from "discord.js";
 import { Command } from "../Command";
 
 export const Egg: Command = {
@@ -7,8 +7,8 @@ export const Egg: Command = {
     type: "CHAT_INPUT",
     
     run: async (client: Client, interaction: BaseCommandInteraction) => {
-        const content = `_Can I offer you an Egg in these trying times?_`;
-        
+        const content = `_Can I offer you a nice egg in these trying time?_`;
+  
         await interaction.followUp({
             ephemeral: true,
             content,

@@ -1,4 +1,4 @@
-import { BaseCommandInteraction, Client, Guild } from "discord.js";
+import { Client, Guild} from "discord.js";
 
 export default (client: Client): void => {
     
@@ -6,19 +6,15 @@ export default (client: Client): void => {
         if (!member) {
             return;
         }
-        
-        client.on("messageCreate", async (message) => {
-            message.channel.send(`Welcome ${member.user.username}`)
-        })
-        console.log(`Welcome ${member.user.username}`);
-        
+        const channel = member.guild.systemChannel;
+        channel?.send(`Welcome ${member.user.username} :chicken:`);
     });
 
     client.on("guildMemberRemove", async (member) => {
         if (!member) {
             return;
         }
-
+        console.log(member.guild.systemChannel);
         console.log(`Casses toi! ${member.user.username}`);
     })
 }; 
