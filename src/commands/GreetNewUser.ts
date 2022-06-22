@@ -1,4 +1,4 @@
-import { Client, Guild} from "discord.js";
+import { Client, MessageEmbed} from "discord.js";
 
 export default (client: Client): void => {
     
@@ -6,15 +6,18 @@ export default (client: Client): void => {
         if (!member) {
             return;
         }
-        const channel = member.guild.systemChannel;
-        channel?.send(`Welcome ${member.user.username} :chicken:`);
-    });
+        const user = member.user;
+        const image = (await user).displayAvatarURL();
+        const embed = new MessageEmbed()
+            .setColor("DARK_AQUA")
+            .setTitle("New Chick Alert!")
+            .setDescription(`Welcome ${user}!`)
+            .setImage(image)
 
-    client.on("guildMemberRemove", async (member) => {
-        if (!member) {
-            return;
-        }
-        console.log(member.guild.systemChannel);
-        console.log(`Casses toi! ${member.user.username}`);
-    })
+        const channel = member.guild.systemChannel;
+
+        channel?.send({
+            embeds: [embed]
+        })
+    });
 }; 
