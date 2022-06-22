@@ -8,6 +8,7 @@ export default (client: Client): void => {
         }
         const user = member.user;
         const image = (await user).displayAvatarURL();
+  
         const embed = new MessageEmbed()
             .setColor("DARK_AQUA")
             .setTitle("New Chick Alert!")
