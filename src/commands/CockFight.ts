@@ -1,4 +1,4 @@
-import { BaseCommandInteraction, Client} from "discord.js";
+import { BaseCommandInteraction, Client } from "discord.js";
 import { cockFightingScript } from "../functions/FightSimScript";
 import { Command } from "../Command"
 import { IMAGES, OPTIONS } from "../CommandOptions";
@@ -14,7 +14,7 @@ export const CockFight: Command = {
             type: "USER",
             required: true
         },
-        
+
     ],
 
     run: async (client: Client, interaction: BaseCommandInteraction) => {
@@ -22,12 +22,9 @@ export const CockFight: Command = {
         const channel = interaction.guild?.systemChannel;
         const challenger = interaction.user;
         const taggedUser = interaction.options.getUser(OPTIONS.COMMAND_MENTIONED_USER);
-        const fighters = [
-            challenger,
-            taggedUser
-        ];
+        const fighters = [challenger, taggedUser];
         const winner = fighters[Math.floor(Math.random() * fighters.length)];
-        const content =  `**CUCCO! _${challenger.username}_ has challenged you to a cock fight!** ${taggedUser}`  
+        const content = `**CUCCO! _${challenger.username}_ has challenged you to a cock fight!** ${taggedUser}`
 
         await interaction.followUp({
             ephemeral: true,
@@ -36,5 +33,5 @@ export const CockFight: Command = {
         });
         cockFightingScript(interaction, channel!, winner!);
     }
-}; 
+};
 

@@ -14,7 +14,8 @@ dotenv.config({ path: 'C:/Users/PC/Desktop/Projects/Web/ChickenBot/.env' }); // 
             Intents.FLAGS.GUILD_MESSAGES,
             Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
             Intents.FLAGS.GUILD_MEMBERS
-        ]
+        ],
+        partials: ['MESSAGE', 'CHANNEL', 'REACTION']
     });
 
     ready(bot);
