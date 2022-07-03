@@ -1,4 +1,4 @@
-import { BaseCommandInteraction, Client, GuildTextBasedChannel } from "discord.js";
+import { BaseCommandInteraction, Client } from "discord.js";
 import { Command } from "../Command";
 
 export const Cdash: Command = {

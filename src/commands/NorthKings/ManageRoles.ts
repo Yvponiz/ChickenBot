@@ -1,8 +1,6 @@
 import { Client } from "discord.js";
-import { addRoles } from "../../functions/AddRoles";
-import { removeRoles } from "../../functions/RemoveRoles";
 import * as NorthKingsConfig from "../../configs/NorthKingsConfig";
-//import { roles } from "../../functions/RemoveRoles";
+import { roles } from "../../functions/AddRemoveRoles";
 
 export default (client: Client): void => {
     client.on("messageReactionAdd", async (reaction, user) => {
@@ -12,9 +10,9 @@ export default (client: Client): void => {
             }
             await reaction.fetch();
             const emojis = await reaction.emoji.name;
-            const member = reaction.message.guild!.members.fetch(user.id);
+            const member = await reaction.message.guild!.members.fetch(user.id);
 
-            addRoles(await member, emojis!);
+            roles[emojis ?? '']?.add(member);
         }
     });
 
@@ -25,9 +23,10 @@ export default (client: Client): void => {
             }
             await reaction.fetch();
             const emojis = await reaction.emoji.name;
-            const member = reaction.message.guild!.members.fetch(user.id);
+            const member = await reaction.message.guild!.members.fetch(user.id);
 
-            removeRoles(await member, emojis!);
+            roles[emojis ?? '']?.remove(member);
         }
+
     });
 }; 

@@ -19,7 +19,6 @@ export const Egg: Command = {
         const taggedUser = interaction.options.getUser(OPTIONS.COMMAND_MENTIONED_USER);
         const content = `_Can I offer you a nice egg in these trying time?_ ${taggedUser}`;
 
-        console.log(taggedUser);
         await interaction.followUp({
             ephemeral: true,
             content,
