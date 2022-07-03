@@ -2,9 +2,9 @@ FROM node:alpine as base
 
 WORKDIR /src/Bot
 
-COPY ./package.json ./yarn.lock ./
+COPY ./package.json ./
 
-RUN yarn install --frozen-lockfile && yarn cache clean
+RUN npm install --production
 
 COPY . .
 
