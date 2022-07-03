@@ -2,10 +2,11 @@
   "name": "chicken-bot",
   "version": "1.0.0",
   "description": "My First Discord Bot",
-  "main": "main.ts",
+  "main": "Bot.ts",
   "author": "Yvanoski Sanon",
   "engines": {
-    "node": ">=16.0.0"
+    "node": "16.13.1",
+    "npm": "*"
   },
   "dependencies": {
     "@discordjs/builders": "^0.15.0",
@@ -24,6 +25,10 @@
   },
   "scripts": {
     "start": "ts-node src/Bot.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yvponiz/ChickenBot.git"
   },
   "license": "ISC",
   "devDependencies": {
