@@ -7,9 +7,5 @@ export async function cockFightingScript (interaction: BaseCommandInteraction, c
     await wait(2000);
     await channel!.send("...");
     await wait(1000);
-    await channel!.send("....");
-    await wait(1000);
-    await channel!.send(".....");
-    await wait(2000);
     channel?.send(`**And the winner is... ${winner}!!! :tada:**`)
 }

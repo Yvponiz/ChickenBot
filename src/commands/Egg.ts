@@ -1,4 +1,4 @@
-import { BaseCommandInteraction, Client, GuildTextBasedChannel, MessageEmbed } from "discord.js";
+import { BaseCommandInteraction, Client} from "discord.js";
 import { Command } from "../Command"
 import { IMAGES, OPTIONS } from "../CommandOptions";
 
