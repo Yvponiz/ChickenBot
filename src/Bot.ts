@@ -1,5 +1,5 @@
 import * as dotenv from "dotenv";
-import { Client, Intents, Permissions } from "discord.js";
+import { Client, Intents} from "discord.js";
 import interactionCreate from "./listeners/interactionCreate";
 import ready from "./listeners/ready";
 import type { NextApiRequest, NextApiResponse } from 'next'

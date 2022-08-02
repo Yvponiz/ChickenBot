@@ -31,8 +31,7 @@ export const Urban: Command = {
                 .then(res => res.json())
                 .then((data) => {
                     console.log(JSON.stringify(data.list[0]))
-                    return `**Definition**": ${data.list[0].definition}\n**Exemple**": ${data.list[0].example}`
-                    
+                    return `**Word**:"${search?.value}"\n**Definition**": ${data.list[0].definition}\n**Exemple**": ${data.list[0].example}`
                 })
                 .catch(err => console.error('error:' + err));
         }
