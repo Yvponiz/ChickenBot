@@ -18,7 +18,3 @@ export const RandomPhrase: Command = {
         });
     }
 };
-
-
-
-

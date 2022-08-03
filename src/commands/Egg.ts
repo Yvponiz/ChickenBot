@@ -25,4 +25,4 @@ export const Egg: Command = {
             files: [IMAGES.COMMAND_EGG]
         });
     }
-}; 
+}

@@ -8,3 +8,4 @@ import { RandomPhrase } from "./commands/RandomPhrases";
 import { Urban } from "./commands/Urban";
 
 export const Commands: Command[] = [Egg, RandomPhrase, CockFight, Motivate, Urban]; 
+
