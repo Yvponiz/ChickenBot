@@ -1,6 +1,6 @@
 export const roiQuotes: string[] = [
     "Putain de merde, habituellement le silencieux est fourni à l'achat chaque jour.",
-    "Mes n****s savent quele heure il est.",
+    "Mes n****s savent quelle heure il est.",
     "Ils tirent aucun revenu... où est l'hydroponique ?",
     "Un esprit sain dans un corps sain, on mange bien, et pour ma femme de vrais seins...rappelez vous de ces termes!",
     "Le taux de THC dans le poumon est tellement intense qu'il faut bien manger, alors on mange au Commensal.",

@@ -17,7 +17,7 @@ export const Egg: Command = {
 
     run: async (client: Client, interaction: BaseCommandInteraction) => {
         const taggedUser = interaction.options.getUser(OPTIONS.COMMAND_MENTIONED_USER);
-        const content = `_Can I offer you a nice egg in these trying time?_ ${taggedUser}`;
+        const content = `_Can I offer you a nice egg in this trying time?_ ${taggedUser}`;
 
         await interaction.followUp({
             ephemeral: true,

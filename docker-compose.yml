@@ -2,9 +2,11 @@ version: "3.9"
 
 services:
   app:
-    container_name: app
+    container_name: chickenBot
     image: app
     restart: always
+    volumes: 
+      - ./:/app
     build:
       context: .
       dockerfile: Dockerfile

@@ -1,11 +1,9 @@
 FROM node:alpine as base
 
-WORKDIR /src/Bot
+WORKDIR /app
 
-COPY ./package.json ./yarn.lock ./
+#COPY ./package.json ./yarn.lock ./
 
-RUN npm install --production
+#RUN npm install --production
 
-COPY . .
-
-CMD ["node", "./src/Bot.ts"]
+ENTRYPOINT ["./node_modules/.bin/ts-node", "src/Bot.ts"]
