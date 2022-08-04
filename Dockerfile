@@ -7,3 +7,4 @@ WORKDIR /app
 #RUN npm install --production
 
 ENTRYPOINT ["./node_modules/.bin/ts-node", "src/Bot.ts"]
+
