@@ -6,7 +6,7 @@ export default (client: Client): void => {
         if (!member) {
             return;
         }
-        const user = member.user;
+        const user = member;
         const image = (await user).displayAvatarURL();
   
         const embed = new MessageEmbed()
