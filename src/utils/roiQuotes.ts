@@ -28,7 +28,9 @@ export const roiQuotes: string[] = [
     "Les fusils sont braqués sur ta petite amie.",
     "Tous ces artistes rêvent à cela. Tous ces artistes ont jamais touché une Porsche, une Cayenne.",
     "Deux pas en avant, deux pas en arrière, tiens ton fusil allons-y!",
-    "Le Roi Heenok, c'est comme de l'hydroponique avec le plus haut taux de crime au monde mélangé ensemble."
+    "Le Roi Heenok, c'est comme de l'hydroponique avec le plus haut taux de crime au monde mélangé ensemble.",
+    "Mon français excelle plus qu’un africain diplômé de la Sorbonne",
+    "Si j'étais blanc, avec la fame que j'ai, ils me couvriraient d'or comme Once Picsou."
 ]
 
 export const roiUrl: string[] = [
@@ -43,5 +45,5 @@ export const roiUrl: string[] = [
     "http://www.roi-heenok.com/html/images/gifs/watermark/watermark_surpaname.gif",
     "http://www.roi-heenok.com/html/images/gifs/watermark/watermark_femme33.gif",
     "http://www.roi-heenok.com/html/images/gifs/watermark/watermark_pour_personne.gif",
-    
+
 ]
