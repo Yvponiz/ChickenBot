@@ -21,6 +21,8 @@ export default (client: Client): void => {
                 S21sRoles[emojis ?? ''].add(member);
             if (guildId == QcpfConfig.SERVER.ID)
                 qcfpRoles[emojis ?? ''].add(member);
+            if(guildId == "606713220606066710")
+                return;
 
         }
     });

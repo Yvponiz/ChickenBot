@@ -6,6 +6,7 @@ export default (client: Client): void => {
         if (!member) {
             return;
         }
+        
         const user = member;
         const image = (await user).displayAvatarURL();
   
@@ -17,8 +18,10 @@ export default (client: Client): void => {
 
         const channel = member.guild.systemChannel;
 
-        channel?.send({
-            embeds: [embed]
-        })
+        if (channel?.id !== "606713220606066710"){
+            channel?.send({
+                embeds: [embed]
+            })
+        }
     });
 }; 
