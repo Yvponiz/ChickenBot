@@ -17,7 +17,7 @@ export default (client: Client): void => {
         
         GreetNewUser(client);
         AssignRoles(client);
-        Exul(client);
+        //Exul(client);
 
         console.log(`${client.user.username} is online`);
     });
